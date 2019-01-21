@@ -1,0 +1,18 @@
+{
+  "name": "11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup --config --environment NODE_ENV:production",
+    "start": "rollup --config --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dog-names": "^1.0.2",
+    "superb": "^3.0.0",
+    "superheroes": "^2.0.0",
+    "supervillains": "^2.1.0"
+  }
+}
