@@ -1,18 +1,38 @@
 {
-  "name": "11",
+  "private": true,
+  "name": "giphy",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "An application to search for cool GIFs.",
+  "main": "rollup.config.js",
   "scripts": {
     "build": "rollup --config --environment NODE_ENV:production",
     "start": "rollup --config --watch"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amin-Mohamed/GIPHY.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amin-Mohamed/GIPHY/issues"
+  },
+  "homepage": "https://github.com/Amin-Mohamed/GIPHY#readme",
   "dependencies": {
-    "dog-names": "^1.0.2",
-    "superb": "^3.0.0",
-    "superheroes": "^2.0.0",
-    "supervillains": "^2.1.0"
-  }
+    "autoprefixer": "^9.4.5",
+    "node-sass": "^4.11.0",
+    "rollup": "^1.1.0",
+    "rollup-plugin-browsersync": "^1.0.0",
+    "rollup-plugin-postcss": "^1.6.3"
+  },
+  "devDependencies": {
+    "postcss-normalize": "^7.0.1"
+  },
+  "browserslist": {
+   "browsers": [
+     ">0.25%",
+     "not ie 11",
+     "not op_mini all"
+   ]
+ }
 }

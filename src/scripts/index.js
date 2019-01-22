@@ -1,3 +1,5 @@
 'use strict'
 
-console.log('Hello Rollup')
+import "../styles/index.scss";
+
+console.log('Hello Rollup!!!')
