@@ -1,1 +1,26 @@
 // In this file you put all styles related to typography such as p, a, h1, etc.
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+.header__logo {
+    max-width: 500px;
+}
+p {
+    font-size: 20px;
+}
+.search__field {
+    width: 600px;
+    line-height: 35px;
+    border: 1px solid #7835a8;
+}
+.search__button {
+    color: white;
+    background-color: #7835a8;
+    height: 40px;
+    width: 40px;
+}
