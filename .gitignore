@@ -1,3 +1,6 @@
+.env
 node_modules
+public/*.css
 public/*.js
 public/*.map
+.DS_Store

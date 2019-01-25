@@ -1,4 +1,8 @@
+@charset 'UTF-8';
 
-@import "components/_components";
+// Inject postcss-normalize.
+@import-normalize;
 
-@import "project/_project";
+// Project specific styles.
+@import 'project/_project';
+@import 'components/_components';

@@ -1,0 +1,16 @@
+body {
+  background: $color-light;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+footer,
+header,
+main {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+}

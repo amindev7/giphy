@@ -1,39 +1,42 @@
-const browsersync = require("rollup-plugin-browsersync");
-const postcss = require("rollup-plugin-postcss");
-const normalize = require("postcss-normalize");
-const autoprefixer = require("autoprefixer");
-const babel = require ('rollup-plugin-babel');
-const resolve = require ('rollup-plugin-node-resolve');
-const commonjs = require ('rollup-plugin-commonjs');
-const { terser } = require ("rollup-plugin-terser");
-const filesize = require('rollup-plugin-filesize');
+import { terser } from 'rollup-plugin-terser';
+import autoprefixer from 'autoprefixer';
+import babel from 'rollup-plugin-babel';
+import browsersync from 'rollup-plugin-browsersync';
+import commonjs from 'rollup-plugin-commonjs';
+import cssnano from 'cssnano';
+import postcssNormalize from 'postcss-normalize';
+import filesize from 'rollup-plugin-filesize';
+import injectEnv from 'rollup-plugin-inject-env';
+import postcss from 'rollup-plugin-postcss';
+import resolve from 'rollup-plugin-node-resolve';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const isDevelopment = isProduction === false;
 
-module.exports = {
-  input: "src/scripts/index.js",
+export default {
+  input: 'src/scripts/index.js',
   output: {
-    file: "public/giphy.js",
-    format: "iife"
+    file: 'public/giphy.js',
+    format: 'iife'
   },
   plugins: [
-    require('cssnano')({
-      preset: 'default',
-    }),
-     postcss({
-       extract: true,
-       sourceMap: true,
-       plugins: [normalize(), autoprefixer()]
-     }),
-     babel({
-     exclude: 'node_modules/**'
-   }),
     resolve(),
     commonjs(),
-    terser(),
-    filesize(),
-    isDevelopment && terser(),
-    isDevelopment && browsersync({ server: "public" })
-   ]
+    injectEnv(),
+    babel({
+      exclude: 'node_modules/**'
+    }),
+    postcss({
+      extract: true,
+      sourceMap: isDevelopment,
+      plugins: [
+        autoprefixer(),
+        postcssNormalize(),
+        cssnano()
+      ]
+    }),
+    (isDevelopment && browsersync({ server: 'public' })),
+    (isProduction && terser()),
+    (isProduction && filesize())
+  ]
 };

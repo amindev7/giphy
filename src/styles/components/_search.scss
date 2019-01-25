@@ -1,0 +1,32 @@
+.search {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search__button {
+  background-image: url(./../images/search.gif);
+  border: none;
+  background-size: 52px;
+  cursor: pointer;
+  height: 52px;
+  width: 52px;
+}
+
+.search__field {
+  animation-delay: 3;
+  animation-direction: alternate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: border-color-wave;
+  animation-timing-function: linear;
+  font-size: 16px;
+  border-right: none;
+  border: 2px solid $color-purple;
+  padding: 10px;
+  width: calc(100% - 52px);
+}
+
+@keyframes border-color-wave {
+  from { border-color: $color-purple; }
+  to { border-color: $color-pink; }
+}
