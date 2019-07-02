@@ -9,7 +9,7 @@
     "deploy": "npm run build && gh-pages -d public",
     "start": "rollup --config --watch",
     "test": "stylelint **/*.scss && semistandard --verbose | snazzy"
-},
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Amin-Mohamed/GIPHY.git"
@@ -21,38 +21,38 @@
   },
   "homepage": "https://github.com/Amin-Mohamed/GIPHY#readme",
   "dependencies": {
-   "@babel/core": "^7.2.2",
-   "@babel/preset-env": "^7.3.1",
-   "autoprefixer": "^9.4.6",
-   "cssnano": "^4.1.8",
-   "gh-pages": "^2.0.1",
-   "node-sass": "^4.11.0",
-   "postcss-normalize": "^7.0.1",
-   "query-string": "^6.2.0",
-   "rollup": "^1.1.2",
-   "rollup-plugin-babel": "^4.3.2",
-   "rollup-plugin-browsersync": "^1.0.0",
-   "rollup-plugin-commonjs": "^9.2.0",
-   "rollup-plugin-filesize": "^6.0.1",
-   "rollup-plugin-inject-env": "^0.1.0",
-   "rollup-plugin-node-resolve": "^4.0.0",
-   "rollup-plugin-postcss": "^2.0.0",
-   "rollup-plugin-terser": "^4.0.2",
-   "semistandard": "^13.0.1",
-   "snazzy": "^8.0.0",
-   "stylelint": "^9.10.1",
-   "stylelint-config-standard": "^18.2.0",
-   "stylelint-scss": "^3.5.1"
- },
- "stylelint": {
-   "plugins": [
-     "stylelint-scss"
-   ],
-   "extends": "stylelint-config-standard"
- },
- "browserslist": [
-   ">0.25%",
-   "not ie 11",
-   "not op_mini all"
- ]
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "autoprefixer": "^9.6.0",
+    "cssnano": "^4.1.10",
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.12.0",
+    "postcss-normalize": "^7.0.1",
+    "query-string": "^6.2.0",
+    "rollup": "^1.1.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-browsersync": "^1.0.0",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-filesize": "^6.0.1",
+    "rollup-plugin-inject-env": "^0.1.0",
+    "rollup-plugin-node-resolve": "^4.2.4",
+    "rollup-plugin-postcss": "^2.0.0",
+    "rollup-plugin-terser": "^4.0.4",
+    "semistandard": "^13.0.1",
+    "snazzy": "^8.0.0",
+    "stylelint": "^9.10.1",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.5.1"
+  },
+  "stylelint": {
+    "plugins": [
+      "stylelint-scss"
+    ],
+    "extends": "stylelint-config-standard"
+  },
+  "browserslist": [
+    ">0.25%",
+    "not ie 11",
+    "not op_mini all"
+  ]
 }
